@@ -38,4 +38,3 @@ else:
 for link in music:
     print(f'\n{counter} : {link}')
     counter +=1
-    
