@@ -24,7 +24,7 @@ def request_site(site_url):
 def crawler(html_page):
     music = set()
     string = html_page.text
-    pattern = r"""([https+\:\/\/[a-zA-Z0-9\/\.\-\_\!\@\#\$\%\^\&\*\(\)]+\.mp3)"""
+    pattern = r"(?:https?://)?(?:[^\s\"'<>]+\.)+(?:mp3|wav|ogg|flac|m4a)(?:\?[^\s\"'<>]*)?"
     regex = re.findall(pattern,string)
     
     if len(regex) !=0:
